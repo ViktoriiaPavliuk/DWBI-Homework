@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DWBI_Module_2_HW">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="PC-VP:PC-VP\Viktoriia">
+          <Created>2019-05-28T17:57:16.5199083+03:00</Created>
+          <Type>SQL</Type>
+          <Server>PC-VP</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="1_db_VP_module_2_creation.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>1_db_VP_module_2_creation.sql</FullPath>
+        </FileNode>
+        <FileNode Name="10_check_constratint_validation.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>10_check_constratint_validation.sql</FullPath>
+        </FileNode>
+        <FileNode Name="11_NOT_NULL_constraint_validation.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>11_NOT_NULL_constraint_validation.sql</FullPath>
+        </FileNode>
+        <FileNode Name="12_insert_default_value.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>12_insert_default_value.sql</FullPath>
+        </FileNode>
+        <FileNode Name="13_insert_unique_key_violation.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>13_insert_unique_key_violation.sql</FullPath>
+        </FileNode>
+        <FileNode Name="14_primary_key_violation.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>14_primary_key_violation.sql</FullPath>
+        </FileNode>
+        <FileNode Name="15_foreign_key_constraint_violation.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>15_foreign_key_constraint_violation.sql</FullPath>
+        </FileNode>
+        <FileNode Name="16_First_Synonym_and_demo_db_creation.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>16_First_Synonym_and_demo_db_creation.sql</FullPath>
+        </FileNode>
+        <FileNode Name="17_Second_Synonym.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>17_Second_Synonym.sql</FullPath>
+        </FileNode>
+        <FileNode Name="18_Third_Synonym.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>18_Third_Synonym.sql</FullPath>
+        </FileNode>
+        <FileNode Name="19_Fourth_Synonym.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>19_Fourth_Synonym.sql</FullPath>
+        </FileNode>
+        <FileNode Name="2_tables_creation.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>2_tables_creation.sql</FullPath>
+        </FileNode>
+        <FileNode Name="3_update_trigger_on_patient_creation.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>3_update_trigger_on_patient_creation.sql</FullPath>
+        </FileNode>
+        <FileNode Name="4_views_creation.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>4_views_creation.sql</FullPath>
+        </FileNode>
+        <FileNode Name="5_view_with_check_option_creation.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>5_view_with_check_option_creation.sql</FullPath>
+        </FileNode>
+        <FileNode Name="6_second_pair_of_tables_creation.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>6_second_pair_of_tables_creation.sql</FullPath>
+        </FileNode>
+        <FileNode Name="7.User_Info_Update_trigger_creation.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>7.User_Info_Update_trigger_creation.sql</FullPath>
+        </FileNode>
+        <FileNode Name="8_User_Info_INSERT_trigger_creation.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>8_User_Info_INSERT_trigger_creation.sql</FullPath>
+        </FileNode>
+        <FileNode Name="9_User_Info_DELETE_trigger_Creation.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>9_User_Info_DELETE_trigger_Creation.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>
