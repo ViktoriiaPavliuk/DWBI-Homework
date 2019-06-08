@@ -9,7 +9,7 @@ city varchar (20)
 );
 
 create table details(
-detailid int not null primary key,
+detailid int not null  primary key,
 name varchar(20),
 color varchar(20),
 weight int,

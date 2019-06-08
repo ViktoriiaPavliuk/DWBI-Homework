@@ -12,6 +12,37 @@ go
  where rating<(select * from cte)
  go
 
+ ---TASK 2---
+
+ select distinct products.productid 
+ into London_products
+ from products
+ inner join supplies on supplies.productid = products.productid
+ inner join details on supplies.detailid = details.detailid
+ where products.city = 'London' OR details.city = 'London';
+ 
+---TASK 3-----
+
+---keep the products where at least at one row of the supplies table there is detailid value, and delete the products where NONE of the rows of the supplies table has detailid value
+delete from supplies
+ where productid NOT IN
+(select productid from supplies 
+group by productid,detailid having not detailid is null)
+---trigger to delete products from products table when this product is deleted from supplies table
+go
+CREATE or alter TRIGGER Produts_DELETE 
+ON supplies
+AFTER DELETE
+AS
+BEGIN
+delete from products 
+WHERE productid=(select productid from DELETED)
+END
+
+---TASK 4---
+
+
+
  ---TASK 5---
 
  ;with red_details as(
@@ -21,6 +52,66 @@ go
  update supplies
  set quantity=quantity*1.1
  where detailid in(select * from red_details)
+
+ ---TASK 6---
+
+ select distinct color, city
+ into color_city
+ from details;
+
+ ---TASK 7---
+ select distinct detailid
+ into London_details
+ from supplies
+ where supplierid IN (select supplierid from suppliers where city='London') OR
+ productid IN (select productid from products where city='London');
+
+ ---TASK 8---
+ insert into suppliers
+ values(10,'White',NULL,'New York');
+
+ ---TASK 9---
+delete from supplies  
+where productid IN(select productid from products 
+where city= 'Roma');
+
+go
+CREATE or alter TRIGGER Produts_DELETE 
+ON supplies
+AFTER DELETE
+AS
+BEGIN
+delete from products 
+where city= 'Roma'
+END
+
+---TASK 10---
+
+
+  ---TASK 11---
+  select * from details;
+update details
+set color='Yellow'
+where color='Red' AND weight<15;
+
+---TASK 12---
+select productid,city into products_cities
+from products
+where city like '_o%';
+
+---TASK 13----
+update suppliers
+set rating=rating+10
+where supplierid IN(
+select distinct supplierid
+from supplies
+where quantity>(select AVG(quantity)from supplies));
+
+---TASK 14----
+select supplierid, name
+into product_1_details
+from suppliers 
+where supplierid IN(select supplierid from supplies where productid=1);
 
  ---TASK 15---
  insert into suppliers values
