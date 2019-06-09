@@ -25,7 +25,7 @@ city varchar(20)
 create table supplies(
 supplierid int foreign key references suppliers(supplierid),
 detailid int foreign key references details(detailid),
-productid int foreign key references products(productid),
+productid int foreign key references products(productid) ON DELETE CASCADE,
 quantity int
 );
 

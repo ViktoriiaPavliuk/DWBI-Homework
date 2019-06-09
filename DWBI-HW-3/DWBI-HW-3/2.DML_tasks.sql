@@ -76,6 +76,12 @@ where s1.detailid<>s2.detailid and s1.detailid>s2.detailid;
  values(10,'White',NULL,'New York');
 
  ---TASK 9---
+
+ ---with cascade constraint 
+delete from products 
+where city= 'Roma';
+
+---without cascade constraint 
 delete from supplies  
 where productid IN(select productid from products 
 where city= 'Roma');
