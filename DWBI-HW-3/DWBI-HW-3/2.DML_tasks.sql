@@ -39,14 +39,14 @@ delete from products
 WHERE productid=(select productid from DELETED)
 END
 
----TASK 4---???
+---TASK 4---
 
 select distinct s1.supplierid, s1.detailid as detail1, s2.detailid as detail2
 into couples_of_details
 from supplies s1
-inner join supplies s2
-on s1.supplierid=s2.supplierid
---where s1.detailid<>s2.detailid;
+ inner join supplies as s2
+ on  s1.supplierid=s2.supplierid 
+where s1.detailid<>s2.detailid and s1.detailid>s2.detailid;
 
  ---TASK 5---
 
