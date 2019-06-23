@@ -68,16 +68,17 @@ from Orders;
 ---TASK 2.1 NUMBERS FROM 1 TO 10000---
 ; with CTE as  
 (  
- select 1 Number  
+ select 1 Number 
  union all  
  select Number +1 from CTE where Number<10000  
 )  
-  
-select *from CTE  
+
+select *from CTE 
+option( MAXRECURSION 10000);
 
 ---TASK 2.2 COUNT WEEKENDS IN THE MONTH---
 
- WITH ShowDays (D, name)
+ WITH ShowDays (D, Dname)
  AS
  ( 
  SELECT cast ('20190101' as date) as D, datename(WEEKDAY, '20190101')
@@ -89,9 +90,9 @@ select *from CTE
 
  ShowWeekends AS
   (
-  SELECT D, name
+  SELECT D, Dname
   FROM ShowDays
-  WHERE name in ('Saturday', 'Sunday')
+  WHERE Dname in ('Saturday', 'Sunday')
   )
 
   SELECT COUNT(*) 
