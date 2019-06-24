@@ -55,15 +55,20 @@ order by VendCity;
 select OrderNumber,MAX(DaysToDeliver) as DaysToDeliver
 from Product_Vendors
 inner join Order_Details on Product_Vendors.ProductNumber=Order_Details.ProductNumber
-Group by OrderNumber;
+group by OrderNumber
+order by OrderNumber;--for better readability
 
 ---TASK 13---
 select ProductNumber,QuantityOnHand*RetailPrice as StockCost
 from Products;
 
 ---TASK 14---
-select OrderNumber,DATEDIFF(day,OrderDate,ShipDate) as ShipDays
-from Orders;
+select Orders.OrderNumber,DATEDIFF(day,OrderDate,ShipDate)+MAX(DaysToDeliver) as DeliveryDays
+from Orders
+inner join Order_Details on Order_Details.OrderNumber=Orders.OrderNumber
+inner join Product_Vendors on Product_Vendors.ProductNumber=Order_Details.ProductNumber
+group by Orders.OrderNumber, OrderDate,ShipDate
+order by OrderNumber;
 
 ---TASK 2.1 NUMBERS FROM 1 TO 10000---
 ; with CTE as  
