@@ -14,12 +14,15 @@ go
 
  ---TASK 2---
 
- select distinct products.productid 
- into London_products
- from products
- inner join supplies on supplies.productid = products.productid
- inner join details on supplies.detailid = details.detailid
- where products.city = 'London' OR details.city = 'London';
+ DROP table if exists table_task2
+go
+SELECT DISTINCT supplies.productid INTO table_task2
+FROM supplies  JOIN suppliers  ON supplies.supplierid=suppliers.supplierid
+JOIN products ON supplies.productid=products.productid
+WHERE products.city='London' OR suppliers.city='London'
+go
+SELECT * FROM table_task2
+go
  
 ---TASK 3-----
 
