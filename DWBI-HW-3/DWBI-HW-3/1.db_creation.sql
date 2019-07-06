@@ -1,5 +1,9 @@
+drop database if exists [VP_module_3]
+go
 create database VP_module_3;
 use VP_module_3
+go
+drop table if exists [dbo].[suppliers]
 go
 create table suppliers(
 supplierid int not null primary key,
@@ -7,7 +11,8 @@ name varchar(20),
 rating int,
 city varchar (20)
 );
-
+drop table if exists [dbo].[details]
+go
 create table details(
 detailid int not null  primary key,
 name varchar(20),
@@ -15,13 +20,15 @@ color varchar(20),
 weight int,
 city varchar(20),
 );
-
+drop table if exists [dbo].[products]
+go
 create table products(
 productid int not null primary key,
 name varchar(20),
 city varchar(20)
 );
-
+drop table if exists [dbo].[supplies]
+go
 create table supplies(
 supplierid int foreign key references suppliers(supplierid),
 detailid int foreign key references details(detailid),
