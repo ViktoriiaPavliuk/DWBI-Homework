@@ -56,8 +56,34 @@ from Lviv_tree;
 
 
 --TASK 6--
-select  * from geography;
+;with Lviv_tree_(name, id, region_id,level,path) as
+(select name, id,region_id,level=1,CAST('/'+name as varchar(max))as path from geography
+where name='Lviv'
+union all 
+select geography.name,geography.id, geography.region_id, Lviv_tree_.level+1 as level,
+CAST(Lviv_tree_.path +'/'+
+CAST(geography.name as varchar(max)) as varchar(max)) as path
+from geography 
+inner join Lviv_tree_ on
+geography.region_id=Lviv_tree_.id
+)
+SELECT name,level,path
+FROM Lviv_tree_
+ORDER BY path;
 
-
-
-
+--TASK 7--
+--???????? ?????, ???? ???????? ?????? ?? ??????? ? ???????? ?????? ??? ??????? Lviv.
+;with Lviv_tree_(name, id,path,pathlen,center) as
+(select name , id,CAST('/'+name as varchar(max))as path, pathlen=1, center=name from geography
+where name='Lviv'
+union all 
+select geography.name ,geography.id,
+CAST(Lviv_tree_.path +'/'+
+CAST(geography.name as varchar(max)) as varchar(max)) as path, pathlen+1,center
+from geography 
+inner join Lviv_tree_ on
+geography.region_id=Lviv_tree_.id
+)
+SELECT name as region,center,pathlen,path
+FROM Lviv_tree_
+ORDER BY path;
