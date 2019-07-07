@@ -1,7 +1,6 @@
 use VP_module_5
 go
 ---TASK 1---
-
 select supplierid
 from suppliers
 where city= 'London'
@@ -10,17 +9,24 @@ select supplierid
 from suppliers
 where city= 'Paris';
 
----TASK 2 a---  
+---TASK 2 a (AND) without duplicats---  
 
 select city from suppliers
-UNION ALL
+INTERSECT 
 select city from details
 order by city asc
 
----TASK 2 b---
+---TASK 2 b (OR)with duplicates ---
 
 select city from suppliers
 UNION
+select city from details
+order by city asc
+
+---TASK 2 b (OR)without duplicates ---
+
+select city from suppliers
+UNION ALL
 select city from details
 order by city asc
 

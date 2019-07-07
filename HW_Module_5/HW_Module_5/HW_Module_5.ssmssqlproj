@@ -19,6 +19,12 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
+        <FileNode Name="Calendar.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Calendar.sql</FullPath>
+        </FileNode>
         <FileNode Name="CTE_Hierarchical queries.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
@@ -42,12 +48,6 @@
           <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Queries_with_subqueries.sql</FullPath>
-        </FileNode>
-        <FileNode Name="SQLQuery1.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>PC-VP</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>SQLQuery1.sql</FullPath>
         </FileNode>
         <FileNode Name="UNION,INTERSECT,EXCEPT.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC-VP:True</AssociatedConnectionMoniker>
