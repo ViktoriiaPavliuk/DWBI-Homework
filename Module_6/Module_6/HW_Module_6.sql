@@ -30,7 +30,7 @@ select * from
 ROW_NUMBER() over (order by supplierid) as rn,
 count(*) over () as tot
 from supplies) as f
-where rn between 10 and 15
+where rn between 10 and 15;
 
 ---TASK 6---
 select * from
