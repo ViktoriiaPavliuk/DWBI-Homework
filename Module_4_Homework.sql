@@ -81,7 +81,7 @@ order by OrderNumber;
 select *from CTE 
 option( MAXRECURSION 10000);
 
----TASK 2.2 COUNT WEEKENDS IN THE MONTH---
+---TASK 2.2 COUNT WEEKENDS IN THE YEAR---
 
  WITH ShowDays (D, Dname)
  AS
