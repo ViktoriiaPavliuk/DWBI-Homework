@@ -31,11 +31,15 @@ select city from details
 order by city asc
 
 ---TASK 3 ---
-
-select supplierid,name from suppliers
+select suppliers.supplierid,suppliers.name
+from suppliers 
 except
-select supplierid,name from suppliers
-where city='London';
+select suppliers.supplierid,suppliers.name
+from suppliers
+inner join supplies 
+on supplies.supplierid = suppliers.supplierid
+inner join details 
+on details.detailid = supplies.detailid and details.city = 'London';
 
 ---TASK 4 ---
 
